@@ -1,5 +1,5 @@
 const comments_page_id = 1; // This number should be unique on every page
-fetch("comments.php?page_id=" + comments_page_id).then(response => response.text()).then(data => {
+fetch("comments.php").then(response => response.text()).then(data => {
   document.querySelector(".comments").innerHTML = data;
   document.querySelectorAll(".comments .write_comment_btn, .comments .reply_comment_btn").forEach(element => {
     element.onclick = event => {

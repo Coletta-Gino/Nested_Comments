@@ -67,24 +67,28 @@
 }
 
 .comments .comment {
-  padding-top: 10px;
+  padding: 7.5px 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
 }
 
 .comments .comment .name {
   display: inline;
   color: #555555;
-  padding: 0 5px 3px 0;
+  margin-bottom: 15px;
   margin: 0;
   font-size: 16px;
 }
 
 .comments .comment .date {
+  display: flex;
+  justify-content: flex-end;
   color: #888888;
   font-size: 14px;
 }
 
-.comments .comment .content {
-  padding: 5px 0 5px 0;
+.comments .comment p {
+  padding: 15px 0;
 }
 
 .comments .comment .reply_comment_btn {
@@ -95,8 +99,10 @@
   text-decoration: none;
 }
 
-.comments .comment .replies {
-  padding-left: 30px;
+.comments .comment .replies > .comment {
+  margin-left: 30px;
+  border-left: 2px solid #ccc; 
+  border-bottom: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,7 +110,6 @@
     padding: 0 10px;
   }
   
-  .content,
   .comments {
     padding: 0 10px;
   }
